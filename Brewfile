@@ -24,6 +24,7 @@ brew 'zsh-autosuggestions'
 brew 'neovim'
 brew 'lazygit'
 
+brew 'bat'
 brew 'docker'
 brew 'adwaita-icon-theme'
 brew 'at-spi2-core'

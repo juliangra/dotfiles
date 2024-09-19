@@ -5,4 +5,3 @@ node_modules
 .config/lvim/lazy-lock.json
 Library/Application Support/lazygit/state.yml
 Brewfile.lock.json
-.gitconfig

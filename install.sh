@@ -41,6 +41,8 @@ print_divider
 # Symlink the dotfiles using `stow` 
 echo "⚙️  Creating symlinks using 'stow'..."
 stow .
+# Assyme .gitconfig is not updated
+git update-index --skip-worktree .gitconfig
 echo "✅ Dotfiles successfully symlinked."
 
 print_divider

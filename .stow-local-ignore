@@ -1,0 +1,28 @@
+
+RCS
+.+,v
+
+CVS
+\.cvsignore
+
+\.svn
+_darcs
+\.hg
+
+\.git
+\.gitignore
+\.gitmodules
+
+^/README.*
+^/LICENSE.*
+^/COPYING
+
+# custom folders
+scripts
+fonts
+
+# custom files
+install.sh
+Brewfile
+Brewfile.lock.json
+

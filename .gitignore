@@ -2,6 +2,7 @@
 node_modules
 
 .config/gcloud
+.config/raycast/extensions
 .config/lvim/lazy-lock.json
 Library/Application Support/lazygit/state.yml
 Brewfile.lock.json

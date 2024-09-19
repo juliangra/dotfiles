@@ -101,7 +101,7 @@ print_divider
 
 # Install tmux plugin manager
 echo "⚙️  Installing tmux plugin manager..."
-git clone https://githib.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 echo "✅ Tmux plugin manager installed successfully."
 
 # Install lunarvim

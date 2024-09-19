@@ -1,2 +1,8 @@
 .DS_Store
 node_modules
+
+.config/gcloud
+.config/lvim/lazy-lock.json
+Library/Application Support/lazygit/state.yml
+Brewfile.lock.json
+.gitconfig

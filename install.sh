@@ -106,7 +106,11 @@ echo "✅ Tmux plugin manager installed successfully."
 
 # Install lunarvim
 echo "🟩⬜️ Installing LunarVim..."
+if ! command -v lvim &> /dev/null; then
 LV_BRANCH='release-1.4/neovim-0.9' bash <(curl -s https://raw.githubusercontent.com/LunarVim/LunarVim/release-1.4/neovim-0.9/utils/installer/install.sh)
+else
+echo "⏭️  Skipping: LunarVim is already installed."
+fi
 echo "✅ LunarVim installed successfully."
 
 # Source the `.zshrc` file

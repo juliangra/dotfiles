@@ -27,6 +27,7 @@ brew 'lazygit'
 
 # dev
 brew 'node'
+brew 'ripgrep'
 
 brew 'bat'
 brew 'docker'

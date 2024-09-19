@@ -14,6 +14,7 @@ cask 'brave-browser'
 cask 'flux'
 cask 'docker'
 cask 'amazon-q'
+cask '1password'
 
 # zsh-related packages
 tap 'sambadevi/powerlevel9k'

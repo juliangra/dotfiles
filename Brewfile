@@ -15,6 +15,7 @@ cask 'flux'
 cask 'docker'
 cask 'amazon-q'
 cask '1password'
+cask 'rancher'
 
 # zsh-related packages
 tap 'sambadevi/powerlevel9k'
@@ -28,6 +29,8 @@ brew 'lazygit'
 # dev
 brew 'node'
 brew 'ripgrep'
+brew 'go'
+brew 'derailed/k9s/k9s'
 
 brew 'bat'
 brew 'docker'

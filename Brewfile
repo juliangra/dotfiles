@@ -34,6 +34,7 @@ brew 'derailed/k9s/k9s'
 brew 'bufbuild/buf/buf'
 brew 'sqlc'
 brew 'cloud-sql-proxy'
+brew 'fsouza/prettierd/prettierd'
 
 brew 'bat'
 brew 'adwaita-icon-theme'

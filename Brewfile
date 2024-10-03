@@ -32,6 +32,7 @@ brew 'ripgrep'
 brew 'go'
 brew 'derailed/k9s/k9s'
 brew 'bufbuild/buf/buf'
+brew 'sqlc'
 
 brew 'bat'
 brew 'docker'

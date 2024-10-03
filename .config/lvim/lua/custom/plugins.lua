@@ -61,15 +61,15 @@ lvim.plugins = {
   { "kazhala/close-buffers.nvim" },
   {
     "folke/trouble.nvim",
-    -- opts = {}, -- for default options, refer to the configuration section for custom setup.
-    -- cmd = "Trouble",
-    -- keys = {
-    --   {
-    --     "<leader>dd",
-    --     "<cmd>Trouble document_diagnostics<cr>",
-    --     desc = "Diagnostics (Trouble)",
-    --   },
-    -- },
+    opts = {}, -- for default options, refer to the configuration section for custom setup.
+    cmd = "Trouble",
+    keys = {
+      {
+        "<leader>dd",
+        "<cmd>Trouble diagnostics<cr>",
+        desc = "Diagnostics (Trouble)",
+      },
+    },
   },
   -- Telescope recent files
   { "smartpde/telescope-recent-files" },

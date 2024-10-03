@@ -31,6 +31,7 @@ brew 'node'
 brew 'ripgrep'
 brew 'go'
 brew 'derailed/k9s/k9s'
+brew 'bufbuild/buf/buf'
 
 brew 'bat'
 brew 'docker'

@@ -35,6 +35,7 @@ brew 'bufbuild/buf/buf'
 brew 'sqlc'
 brew 'cloud-sql-proxy'
 brew 'fsouza/prettierd/prettierd'
+brew 'grype'
 
 brew 'bat'
 brew 'adwaita-icon-theme'

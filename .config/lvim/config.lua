@@ -54,6 +54,8 @@ reload 'configs.formatters'
 --  ############################
 reload "configs.volar"
 reload "configs.tailwindcss"
+reload 'configs.astro'
+
 
 --
 --

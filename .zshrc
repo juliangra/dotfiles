@@ -4,6 +4,9 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
+autoload -Uz compinit
+compinit
+
 # Path to your oh-my-zsh installation.
 export ZSH="/Users/julian/.oh-my-zsh"
 
@@ -133,7 +136,7 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 alias ntnu="cd ~/Documents/Skole/OneDrive\ -\ NTNU.nosync/H2024/"
 
-cat() {
+function cat {
     bat --style=plain "$@"
 }
 
@@ -186,10 +189,10 @@ export SSH_AUTH_SOCK=/Users/julian/Library/Containers/com.maxgoedjen.Secretive.S
 
 # Q post block. Keep at the bottom of this file.
 # The next line updates PATH for the Google Cloud SDK.
-if [ -f '/Users/julian/Downloads/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/julian/Downloads/google-cloud-sdk/path.zsh.inc'; fi
+# if [ -f '/Users/julian/Downloads/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/julian/Downloads/google-cloud-sdk/path.zsh.inc'; fi
 
-# The next line enables shell command completion for gcloud.
-if [ -f '/Users/julian/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/julian/Downloads/google-cloud-sdk/completion.zsh.inc'; fi
+# # The next line enables shell command completion for gcloud.
+# if [ -f '/Users/julian/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/julian/Downloads/google-cloud-sdk/completion.zsh.inc'; fi
 
 # Amazon Q post block. Keep at the bottom of this file.
 [[ -f "${HOME}/Library/Application Support/amazon-q/shell/zshrc.post.zsh" ]] && builtin source "${HOME}/Library/Application Support/amazon-q/shell/zshrc.post.zsh"

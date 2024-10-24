@@ -26,6 +26,7 @@ brew 'lazygit'
 # dev
 brew 'node'
 brew 'ripgrep'
+brew 'code-minimap'
 brew 'go'
 brew 'derailed/k9s/k9s'
 brew 'bufbuild/buf/buf'

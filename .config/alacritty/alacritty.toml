@@ -10,7 +10,6 @@ bindings = [
   # CMD + t: New tab (new tmux window)
   { key = "T", mods = "Command", command = { program = "/opt/homebrew/bin/tmux", args = [
     "new-window",
-    "/opt/homebrew/bin/zsh",
   ] } },
   # CMD + w: Close pane (close tmux pane)
   { key = "W", mods = "Command", command = { program = "/opt/homebrew/bin/tmux", args = [

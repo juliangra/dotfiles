@@ -4,21 +4,10 @@
 -- Source: https://github.com/vuejs/language-tools/pull/4134/files/a44f3b2ee635de5f4f242d3d6a1dfa3718f375d4
 --
 -- (This was committed 42 minutes ago, this will probably be fixed in the future)
-local vue_language_server_path = '~/.local/share/lvim/mason/packages/vue-language-server'
 
 local lspconfig = require('lspconfig')
+-- local util = require('lspconfig.util')
 
-lspconfig.tsserver.setup {
-  init_options = {
-    plugins = {
-      {
-        name = '@vue/typescript-plugin',
-        location = vue_language_server_path,
-        languages = { 'vue' },
-      },
-    },
-  },
-}
 
 -- Setup Volar with the hybrid mode disabled (Requires @vue/language-server version ^2.0.7)
 -- This allows Volar to run embedded `tsserver` meaning we don't need to run `tsserver` as a

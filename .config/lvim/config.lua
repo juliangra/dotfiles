@@ -27,6 +27,9 @@ lvim.format_on_save = true
 -- Set relative line numbers
 vim.opt.relativenumber = true
 
+-- Disable git for nvim-tree to avoid performance issues
+-- lvim.builtin.nvimtree.setup.git.enable = false
+
 -- Disable semantic tokens for all LSP servers (to correct)
 vim.api.nvim_create_autocmd("LspAttach", {
   callback = function(args)
@@ -34,6 +37,7 @@ vim.api.nvim_create_autocmd("LspAttach", {
     client.server_capabilities.semanticTokensProvider = nil
   end,
 });
+
 
 --
 --
@@ -52,7 +56,7 @@ reload 'configs.formatters'
 reload "configs.volar"
 reload "configs.tailwindcss"
 reload 'configs.astro'
-
+reload "configs.typescript"
 
 --
 --

@@ -1,5 +1,11 @@
+# set -x
+# exec 2>zsh.err
+
+zmodload zsh/zprof
+
+#
 # Amazon Q pre block. Keep at the top of this file.
-[[ -f "${HOME}/Library/Application Support/amazon-q/shell/zshrc.pre.zsh" ]] && builtin source "${HOME}/Library/Application Support/amazon-q/shell/zshrc.pre.zsh"
+# [[ -f "${HOME}/Library/Application Support/amazon-q/shell/zshrc.pre.zsh" ]] && builtin source "${HOME}/Library/Application Support/amazon-q/shell/zshrc.pre.zsh"
 # Q pre block. Keep at the top of this file.
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
@@ -153,9 +159,9 @@ alias dt-proxy-dev="cloud-sql-proxy dt-dev-169909:europe-west1:postgres02-europe
 
 
 
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+# export NVM_DIR="$HOME/.nvm"
+# [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+# [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 
 alias vim="lvim"
@@ -180,12 +186,12 @@ export PATH="$HOME/dev/flutter/bin:$PATH"
 
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
-eval "$(/opt/homebrew/bin/brew shellenv)"
+# eval "$(/opt/homebrew/bin/brew shellenv)"
 
 # Add secretive as a source of SSH agent
 export SSH_AUTH_SOCK=/Users/julian/Library/Containers/com.maxgoedjen.Secretive.SecretAgent/Data/socket.ssh
 
-[[ -f "$HOME/fig-export/dotfiles/dotfile.zsh" ]] && builtin source "$HOME/fig-export/dotfiles/dotfile.zsh"
+# [[ -f "$HOME/fig-export/dotfiles/dotfile.zsh" ]] && builtin source "$HOME/fig-export/dotfiles/dotfile.zsh"
 
 # Q post block. Keep at the bottom of this file.
 # The next line updates PATH for the Google Cloud SDK.
@@ -195,7 +201,7 @@ export SSH_AUTH_SOCK=/Users/julian/Library/Containers/com.maxgoedjen.Secretive.S
 # if [ -f '/Users/julian/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/julian/Downloads/google-cloud-sdk/completion.zsh.inc'; fi
 
 # Amazon Q post block. Keep at the bottom of this file.
-[[ -f "${HOME}/Library/Application Support/amazon-q/shell/zshrc.post.zsh" ]] && builtin source "${HOME}/Library/Application Support/amazon-q/shell/zshrc.post.zsh"
+# [[ -f "${HOME}/Library/Application Support/amazon-q/shell/zshrc.post.zsh" ]] && builtin source "${HOME}/Library/Application Support/amazon-q/shell/zshrc.post.zsh"
 
 ### MANAGED BY RANCHER DESKTOP START (DO NOT EDIT)
 export PATH="/Users/julian/.rd/bin:$PATH"

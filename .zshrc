@@ -140,7 +140,7 @@ source $ZSH/oh-my-zsh.sh
 #
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
-alias ntnu="cd ~/Documents/Skole/OneDrive\ -\ NTNU.nosync/H2024/"
+alias ntnu="cd ~/Documents/Skole/OneDrive\ -\ NTNU.nosync/V2025/"
 
 function cat {
     bat --style=plain "$@"

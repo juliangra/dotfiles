@@ -17,5 +17,9 @@ formatters.setup {
   {
     command = "rustfmt",
     filetypes = { "rust" },
-  }
+  },
+  {
+    command = "black",
+    filetypes = { "python" },
+  },
 }

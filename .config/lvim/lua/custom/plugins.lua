@@ -61,6 +61,7 @@ lvim.plugins = {
   { "kazhala/close-buffers.nvim" },
   {
     "folke/trouble.nvim",
+    version = "v3.6.0",
     opts = {}, -- for default options, refer to the configuration section for custom setup.
     cmd = "Trouble",
     keys = {
@@ -113,6 +114,21 @@ lvim.plugins = {
       vim.g.vimtex_quickfix_mode = 0
       vim.g.conceallevel = 1
       vim.g.tex_conceal = 'abdmg'
+      vim.g.vimtex_compiler_latexmk = {
+        aux_dir = '.texfiles/',
+        out_dir = '.texfiles/',
+        -- Add this 'options' line to enable shell-escape:
+        options = { '-shell-escape' },
+      }
+      -- Add these lines to explicitly set executable paths:
+      vim.g.vimtex_latexmk_engines = {
+        pdflatex = '/Users/julian/bin/pdflatex',
+        lualatex = '/Users/julian/bin/lualatex',
+        xelatex  = '/Users/julian/bin/xelatex',
+        latexmk  = '/Users/julian/bin/latexmk',
+        bibtex   = '/Users/julian/bin/bibtex',
+        biber    = '/Users/julian/Library/Application Support/MiKTeX/texmfs/install/executables/darwin-x86_64/biber',
+      }
     end
   },
   -- {

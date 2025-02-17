@@ -9,19 +9,27 @@ lvim.builtin.telescope.on_config_done = function(telescope)
   -- pcall(telescope.load_extension, "flutter")
 end
 
-lvim.builtin.telescope.pickers.find_files = {
-  find_command = {
-    "rg",
-    "--files",
-    "--hidden",
-    "--no-ignore",
-    "-g",
-    "!node_modules",
-    "-g",
-    "!.git",
-    "-g",
-    "!.nuxt/*",
-    "-g",
-    "!.next",
+local current_working_dir = vim.fn.getcwd()
+
+lvim.builtin.telescope.pickers = {
+  find_files = {
+    find_command = {
+      "rg",
+      "--files",
+      "--hidden",
+      "--no-ignore",
+      "-g",
+      "!node_modules",
+      "-g",
+      "!.git",
+      "-g",
+      "!.nuxt/*",
+      "-g",
+      "!.next",
+    },
+    cwd = current_working_dir
+  },
+  live_grep = {
+    cwd = current_working_dir
   },
 }

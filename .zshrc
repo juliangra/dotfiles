@@ -1,11 +1,11 @@
+# Amazon Q pre block. Keep at the top of this file.
+[[ -f "${HOME}/Library/Application Support/amazon-q/shell/zshrc.pre.zsh" ]] && builtin source "${HOME}/Library/Application Support/amazon-q/shell/zshrc.pre.zsh"
 # set -x
 # exec 2>zsh.err
 
 zmodload zsh/zprof
 
 #
-# Amazon Q pre block. Keep at the top of this file.
-[[ -f "${HOME}/Library/Application Support/amazon-q/shell/zshrc.pre.zsh" ]] && builtin source "${HOME}/Library/Application Support/amazon-q/shell/zshrc.pre.zsh"
 zmodload zsh/zprof
 # Q pre block. Keep at the top of this file.
 # If you come from bash you might have to change your $PATH.
@@ -197,15 +197,16 @@ export SSH_AUTH_SOCK=/Users/julian/Library/Containers/com.maxgoedjen.Secretive.S
 export GO_PATH=~/go
 export PATH=$PATH:/$GO_PATH/bin
 
+if command -v tmux &> /dev/null && [ -z "$TMUX" ]; then
+  exec exec tmux new-session -A -s main
+fi
+
 # Q post block. Keep at the bottom of this file.
 # The next line updates PATH for the Google Cloud SDK.
 # if [ -f '/Users/julian/Downloads/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/julian/Downloads/google-cloud-sdk/path.zsh.inc'; fi
 
 # # The next line enables shell command completion for gcloud.
 # if [ -f '/Users/julian/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/julian/Downloads/google-cloud-sdk/completion.zsh.inc'; fi
-
-# Amazon Q post block. Keep at the bottom of this file.
-[[ -f "${HOME}/Library/Application Support/amazon-q/shell/zshrc.post.zsh" ]] && builtin source "${HOME}/Library/Application Support/amazon-q/shell/zshrc.post.zsh"
 
 ### MANAGED BY RANCHER DESKTOP START (DO NOT EDIT)
 export PATH="/Users/julian/.rd/bin:$PATH"
@@ -215,3 +216,5 @@ export PATH="/opt/homebrew/opt/icu4c@76/sbin:$PATH"
 
 # Amazon Q post block. Keep at the bottom of this file.
 [[ -f "${HOME}/Library/Application Support/amazon-q/shell/zshrc.post.zsh" ]] && builtin source "${HOME}/Library/Application Support/amazon-q/shell/zshrc.post.zsh"
+export PATH="/opt/homebrew/opt/libpq/bin:$PATH"
+export PATH="/opt/homebrew/opt/libpq/bin:$PATH"

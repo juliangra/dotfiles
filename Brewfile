@@ -22,6 +22,7 @@ brew 'zsh-autosuggestions'
 # neovim
 brew 'neovim'
 brew 'lazygit'
+brew 'lazydocker'
 
 # dev
 brew 'node'

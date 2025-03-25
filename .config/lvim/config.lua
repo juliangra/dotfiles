@@ -57,6 +57,7 @@ reload "configs.volar"
 reload "configs.tailwindcss"
 reload 'configs.astro'
 reload "configs.typescript"
+reload "configs.python"
 
 --
 --

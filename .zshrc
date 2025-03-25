@@ -192,6 +192,10 @@ eval "$(/opt/homebrew/bin/brew shellenv)"
 # Add secretive as a source of SSH agent
 export SSH_AUTH_SOCK=/Users/julian/Library/Containers/com.maxgoedjen.Secretive.SecretAgent/Data/socket.ssh
 
+# For MiKTeX
+export PATH="/Users/julian/bin:$PATH"
+export PATH="~/bin:$PATH"
+#
 # [[ -f "$HOME/fig-export/dotfiles/dotfile.zsh" ]] && builtin source "$HOME/fig-export/dotfiles/dotfile.zsh"
 
 export GO_PATH=~/go
@@ -213,6 +217,7 @@ export PATH="/Users/julian/.rd/bin:$PATH"
 ### MANAGED BY RANCHER DESKTOP END (DO NOT EDIT)
 export PATH="/opt/homebrew/opt/icu4c@76/bin:$PATH"
 export PATH="/opt/homebrew/opt/icu4c@76/sbin:$PATH"
+export PATH=~/Users/julian/bin:$PATH
 
 # Amazon Q post block. Keep at the bottom of this file.
 [[ -f "${HOME}/Library/Application Support/amazon-q/shell/zshrc.post.zsh" ]] && builtin source "${HOME}/Library/Application Support/amazon-q/shell/zshrc.post.zsh"

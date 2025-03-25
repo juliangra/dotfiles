@@ -108,6 +108,7 @@ lvim.plugins = {
   },
   {
     'lervag/vimtex',
+    version = "v2.15", -- Use for stability; omit to use `main` branch for the latest features
     config = function()
       vim.g.tex_flavor = 'latex'
       vim.g.vimtex_view_method = 'zathura'
@@ -127,7 +128,6 @@ lvim.plugins = {
         xelatex  = '/Users/julian/bin/xelatex',
         latexmk  = '/Users/julian/bin/latexmk',
         bibtex   = '/Users/julian/bin/bibtex',
-        biber    = '/Users/julian/Library/Application Support/MiKTeX/texmfs/install/executables/darwin-x86_64/biber',
       }
     end
   },
@@ -216,5 +216,10 @@ lvim.plugins = {
     dependencies = { 'nvim-treesitter/nvim-treesitter', 'echasnovski/mini.nvim' }, -- if you use the mini.nvim suite
     opts = {},
   },
-  { 'akinsho/git-conflict.nvim',      version = "*", config = true }
+  { 'akinsho/git-conflict.nvim',      version = "*", config = true },
+  -- {
+  --   'goerz/jupytext.nvim',
+  --   version = '0.1.0',
+  --   opts = {}, -- see Options
+  -- }
 }

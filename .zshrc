@@ -152,6 +152,8 @@ alias ls='ls -all --color'
 alias pn="pnpm"
 alias cat="bat"
 
+alias python="python3"
+
 . ~/.config/z.sh
 
 alias ui="'lazygit'"
@@ -202,7 +204,8 @@ export GO_PATH=~/go
 export PATH=$PATH:/$GO_PATH/bin
 
 if command -v tmux &> /dev/null && [ -z "$TMUX" ]; then
-  exec exec tmux new-session -A -s main
+  exec exec tmux 
+  # exec exec tmux new-session -A -s main
 fi
 
 # Q post block. Keep at the bottom of this file.

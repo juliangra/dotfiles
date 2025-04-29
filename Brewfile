@@ -13,6 +13,7 @@ cask 'docker'
 cask 'amazon-q'
 cask '1password'
 cask 'rancher'
+cask 'orbstack'
 
 # zsh-related packages
 tap 'sambadevi/powerlevel9k'

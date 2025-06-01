@@ -26,6 +26,8 @@ lvim.builtin.telescope.pickers = {
       "!.nuxt/*",
       "-g",
       "!.next",
+      "-g",
+      "!.texfiles"
     },
     cwd = current_working_dir
   },

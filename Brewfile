@@ -36,6 +36,7 @@ brew 'sqlc'
 brew 'cloud-sql-proxy'
 brew 'fsouza/prettierd/prettierd'
 brew 'grype'
+brew 'httpie'
 
 # utilities
 cask 'tg-pro'

@@ -1,0 +1,34 @@
+let mapleader=" "
+
+set clipboard=unnamedplus
+set commentary
+
+map <Leader>ff <action>(com.mituuz.fuzzier.Fuzzier)
+map <Leader>gf <action>(com.mituuz.fuzzier.FuzzierVCS)
+map <Leader>mf <action>(com.mituuz.fuzzier.FuzzyMover)
+map <Leader>fg <action>(com.mituuz.fuzzier.FuzzyGrep)
+map <Leader>fg <action>(com.mituuz.fuzzier.FuzzyGrepCaseInsensitive)
+
+vmap <leader>gc :normal! gcc<CR>
+
+noremap <leader>sh :action SplitHorizontally<CR>
+noremap <leader>sv :action SplitVertically<CR>
+nmap <leader>sx :close<CR>
+
+" Tmux-like split navigation
+nnoremap <C-h> <C-w>h
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-l> <C-w>l
+"
+" Tmux-like editor + sidebar navigation
+nnoremap <D-S-e> :action ActivateProjectToolWindow<CR>
+
+" Map <leader>rn to Refactor → Rename
+nnoremap <leader>rn :action RenameElement<CR>
+
+" Comment in normal mode
+nmap <leader>gc :action (CommentByLineComment)<CR>
+" Comment in visual mode
+vmap <leader>gc :action (CommentByLineComment)<CR>
+

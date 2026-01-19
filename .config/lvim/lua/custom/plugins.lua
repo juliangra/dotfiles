@@ -217,6 +217,27 @@ lvim.plugins = {
     opts = {},
   },
   { 'akinsho/git-conflict.nvim',      version = "*", config = true },
+  {
+    "folke/todo-comments.nvim",
+    dependencies = { "nvim-lua/plenary.nvim" },
+    opts = {}
+  },
+  {
+    "luckasRanarison/tailwind-tools.nvim",
+    name = "tailwind-tools",
+    build = ":UpdateRemotePlugins",
+    dependencies = {
+      "nvim-treesitter/nvim-treesitter",
+      "nvim-telescope/telescope.nvim", -- optional
+      "neovim/nvim-lspconfig",         -- optional
+    },
+    opts = {
+      document_color = {
+        enable = true,
+        kind = "background"
+      }
+    } -- your configuration
+  }
   -- {
   --   'goerz/jupytext.nvim',
   --   version = '0.1.0',

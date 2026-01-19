@@ -38,6 +38,7 @@ lvim.keys.normal_mode["<leader>gg"] = "<cmd>:LazyGit <cr>"
 
 lvim.builtin.which_key.mappings.d.d = {}
 lvim.keys.normal_mode["<leader>dd"] = "<cmd>:TroubleToggle <cr>"
+lvim.keys.normal_mode["<leader>tt"] = "<cmd>:TodoTrouble <cr>"
 
 lvim.keys.normal_mode["<leader>rn"] = "<cmd>lua vim.lsp.buf.rename()<cr>"
 lvim.keys.normal_mode["<leader>to"] = ":tabnew<CR>"
@@ -64,6 +65,7 @@ lvim.keys.normal_mode["<leader><leader>"] = "<cmd>lua require('telescope').exten
 lvim.keys.normal_mode["<leader>fo"] = "<cmd>lua require('telescope').extensions.flutter.commands()<CR>"
 lvim.keys.normal_mode["<leader>fr"] = "<cmd>Telescope git_files<CR>"
 lvim.keys.normal_mode["<leader>fg"] = "<cmd>Telescope live_grep<CR>"
+lvim.keys.normal_mode["<leader>td"] = "<cmd>TodoTelescope<CR>"
 lvim.keys.normal_mode["<leader>ft"] = "<cmd>NvimTreeFindFile<CR>"
 
 -- No highlight keymap

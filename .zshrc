@@ -1,5 +1,6 @@
-# Amazon Q pre block. Keep at the top of this file.
-[[ -f "${HOME}/Library/Application Support/amazon-q/shell/zshrc.pre.zsh" ]] && builtin source "${HOME}/Library/Application Support/amazon-q/shell/zshrc.pre.zsh"
+# Kiro CLI pre block. Keep at the top of this file.
+[[ -f "${HOME}/Library/Application Support/kiro-cli/shell/zshrc.pre.zsh" ]] && builtin source "${HOME}/Library/Application Support/kiro-cli/shell/zshrc.pre.zsh"
+
 # set -x
 # exec 2>zsh.err
 
@@ -27,7 +28,7 @@ ZSH_THEME="powerlevel9k/powerlevel9k"
 
 # powerlevel9k config
 POWERLEVEL9K_MODE='nerdfont-complete'
-POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(ssh dir virtualenv kubecontext vcs)
+POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(dir vcs)
 POWERLEVEL9K_DISABLE_RPROMPT=true
 POWERLEVEL9K_PROMPT_ADD_NEWLINE=true
 POWERLEVEL9K_LEFT_SEGMENT_SEPARATOR=''
@@ -45,8 +46,8 @@ POWERLEVEL9K_DIR_DEFAULT_BACKGROUND='none'
 POWERLEVEL9K_VIRTUALENV_FOREGROUND='005'
 POWERLEVEL9K_VIRTUALENV_BACKGROUND='none'
 # kubecontext
-POWERLEVEL9K_KUBECONTEXT_FOREGROUND='039'
-POWERLEVEL9K_KUBECONTEXT_BACKGROUND='none'
+# POWERLEVEL9K_KUBECONTEXT_FOREGROUND='039'
+# POWERLEVEL9K_KUBECONTEXT_BACKGROUND='none'
 # vcs
 POWERLEVEL9K_VCS_CLEAN_FOREGROUND='002'
 POWERLEVEL9K_VCS_UNTRACKED_FOREGROUND='003'
@@ -145,12 +146,14 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 alias ntnu="cd ~/Documents/Skole/OneDrive\ -\ NTNU.nosync/V2025/"
+alias ij="open -a \"IntelliJ IDEA.app\""
 
 function cat {
     bat --style=plain "$@"
 }
 
-alias ls='ls -all --color'
+
+alias ls="eza --icons=always"
 
 alias pn="pnpm"
 alias cat="bat"
@@ -179,6 +182,8 @@ alias vim="lvim"
 export BUN_INSTALL="/Users/julian/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
 
+export PATH="$PATH:/Users/julian/dev/devex/skiperator/istio-1.27.0/bin"
+
 # pnpm
 export PNPM_HOME="/Users/julian/Library/pnpm"
 export PATH="$PNPM_HOME:$PATH"
@@ -192,11 +197,15 @@ export PATH="$HOME/dev/flutter/bin:$PATH"
 
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
+if [ -z "$INTELLIJ_ENVIRONMENT_READER" ]; then
+  export PATH="/opt/homebrew/bin:$PATH"
+fi
+
 # eval "$(/opt/homebrew/bin/brew shellenv)"
 
 # Add secretive as a source of SSH agent
 export SSH_AUTH_SOCK=/Users/julian/Library/Containers/com.maxgoedjen.Secretive.SecretAgent/Data/socket.ssh
-
+#
 # For MiKTeX
 export PATH="/Users/julian/bin:$PATH"
 export PATH="~/bin:$PATH"
@@ -210,6 +219,8 @@ if command -v tmux &> /dev/null && [ -z "$TMUX" ]; then
   exec exec tmux 
   # exec exec tmux new-session -A -s main
 fi
+
+alias k="kubectl"
 
 # Q post block. Keep at the bottom of this file.
 # The next line updates PATH for the Google Cloud SDK.
@@ -225,7 +236,10 @@ export PATH="/opt/homebrew/opt/icu4c@76/bin:$PATH"
 export PATH="/opt/homebrew/opt/icu4c@76/sbin:$PATH"
 export PATH=~/Users/julian/bin:$PATH
 
-# Amazon Q post block. Keep at the bottom of this file.
-[[ -f "${HOME}/Library/Application Support/amazon-q/shell/zshrc.post.zsh" ]] && builtin source "${HOME}/Library/Application Support/amazon-q/shell/zshrc.post.zsh"
 export PATH="/opt/homebrew/opt/libpq/bin:$PATH"
 export PATH="/opt/homebrew/opt/libpq/bin:$PATH"
+
+
+
+# Kiro CLI post block. Keep at the bottom of this file.
+[[ -f "${HOME}/Library/Application Support/kiro-cli/shell/zshrc.post.zsh" ]] && builtin source "${HOME}/Library/Application Support/kiro-cli/shell/zshrc.post.zsh"

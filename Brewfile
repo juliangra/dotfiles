@@ -46,6 +46,8 @@ cask 'flux'
 cask 'monitorcontrol'
 
 brew 'bat'
+brew 'eza'
+brew 'yazi'
 brew 'adwaita-icon-theme'
 brew 'at-spi2-core'
 brew 'brotli'

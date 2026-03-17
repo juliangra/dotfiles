@@ -145,7 +145,6 @@ source $ZSH/oh-my-zsh.sh
 #
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
-alias ntnu="cd ~/Documents/Skole/OneDrive\ -\ NTNU.nosync/V2025/"
 alias ij="open -a \"IntelliJ IDEA.app\""
 
 function cat {
@@ -163,8 +162,6 @@ alias python="python3"
 . ~/.config/z.sh
 
 alias ui="'lazygit'"
-
-alias dt-proxy-dev="cloud-sql-proxy dt-dev-169909:europe-west1:postgres02-europe-west-1 --port 8432"
 
 # export PATH="$NVM_DIR/versions/node/$(nvm version)/bin:$PATH"
 

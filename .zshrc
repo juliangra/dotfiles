@@ -115,7 +115,7 @@ POWERLEVEL9K_VCS_MODIFIED_BACKGROUND='none'
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
-    git
+    # git
     zsh-autosuggestions
 )
 
@@ -146,6 +146,9 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 alias ij="open -a \"IntelliJ IDEA.app\""
+alias tj="terraform"
+
+eval "$(direnv hook zsh)"
 
 function cat {
     bat --style=plain "$@"
@@ -240,3 +243,9 @@ export PATH="/opt/homebrew/opt/libpq/bin:$PATH"
 
 # Kiro CLI post block. Keep at the bottom of this file.
 [[ -f "${HOME}/Library/Application Support/kiro-cli/shell/zshrc.post.zsh" ]] && builtin source "${HOME}/Library/Application Support/kiro-cli/shell/zshrc.post.zsh"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
+export PATH="$HOME/.jenv/bin:$PATH"
+eval "$(jenv init -)"

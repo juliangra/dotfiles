@@ -38,6 +38,11 @@ brew 'grype'
 brew 'httpie'
 brew 'go-jsonnet'
 brew 'operator-sdk'
+cask 'gcloud-cli'
+
+# ai
+brew 'anomalyco/tap/opencode'
+cask 'copilot-cli'
 
 # utilities
 cask 'tg-pro'

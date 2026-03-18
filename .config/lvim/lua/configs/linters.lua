@@ -7,8 +7,13 @@ local function is_node_project()
 end
 
 local function contains_eslint_config()
-  -- Check if go.mod exists in the project root
+  -- Check if eslint config exists in the project root
   return util.root_pattern({ ".eslintrc", ".eslintrc.js", ".eslintrc.json", "eslint.config.js" })(vim.fn.expand('%:p:h'))
+end
+
+local function contains_biome_config()
+  -- Check if biome config exists in the project root
+  return util.root_pattern({ "biome.json" })(vim.fn.expand('%:p:h'))
 end
 
 linters.setup {

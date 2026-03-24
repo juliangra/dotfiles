@@ -6,3 +6,18 @@ node_modules
 .config/lvim/lazy-lock.json
 Library/Application Support/lazygit/state.yml
 Brewfile.lock.json
+
+# Ignore all .env files
+.env
+.env.*
+
+# Ignore all log, tmp and cache files
+*.log
+*.tmp
+*.cache
+
+# Ignore all tmux plugin files
+.tmux/plugins
+
+# Ignore all k9s cluster configs
+Library/Application Support/k9s/clusters

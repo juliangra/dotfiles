@@ -147,6 +147,7 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 alias ij="open -a \"IntelliJ IDEA.app\""
 alias tj="terraform"
+alias inf="cd ~/dev/infinity-drift"
 
 eval "$(direnv hook zsh)"
 

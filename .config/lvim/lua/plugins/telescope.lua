@@ -21,6 +21,8 @@ lvim.builtin.telescope.pickers = {
       "-g",
       "!node_modules",
       "-g",
+      "!dist",
+      "-g",
       "!.git",
       "-g",
       "!.nuxt/*",

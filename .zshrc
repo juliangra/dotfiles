@@ -148,6 +148,26 @@ source $ZSH/oh-my-zsh.sh
 alias ij="open -a \"IntelliJ IDEA.app\""
 alias tj="terraform"
 alias inf="cd ~/dev/infinity-drift"
+alias bb="cd ~/dev/moller/bruktbilx2/"
+
+# Alias `omo` to enable `oh-my-opencode` plugin
+omo() {
+  local config_file="$HOME/.config/opencode/opencode.json"
+  local updated_json
+
+  updated_json=$(jq '
+    .plugin = (
+      (.plugin // [])
+      | if any(.[]; test("^oh-my-opencode(@.*)?$")) then
+          .
+        else
+          . + ["oh-my-opencode@latest"]
+        end
+    )
+  ' "$config_file")
+
+  OPENCODE_CONFIG_CONTENT="$updated_json" opencode "$@"
+}
 
 eval "$(direnv hook zsh)"
 
@@ -187,7 +207,10 @@ export PATH="$PATH:/Users/julian/dev/devex/skiperator/istio-1.27.0/bin"
 
 # pnpm
 export PNPM_HOME="/Users/julian/Library/pnpm"
-export PATH="$PNPM_HOME:$PATH"
+case ":$PATH:" in
+  *":$PNPM_HOME/bin:"*) ;;
+  *) export PATH="$PNPM_HOME/bin:$PATH" ;;
+esac
 # pnpm end
 
 # lvim
